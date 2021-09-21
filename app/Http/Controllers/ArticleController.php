@@ -37,7 +37,6 @@ class ArticleController extends Controller
 
         $article->title = $request->title;
         $article->body = $request->body;
-        $article->timestamps = false;
 
         $article->save();
         // 登録したらindexに戻る
@@ -50,9 +49,8 @@ class ArticleController extends Controller
         $article = article::find($id);
     // 値の用意
 
-    $article->title = $request->title;
-    $article->body = $request->body;
-    $article->timestamps = false;
+        $article->title = $request->title;
+        $article->body = $request->body;
 
         // 保存
         $article->save();
